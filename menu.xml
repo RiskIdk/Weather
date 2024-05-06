@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="305dp"
+        android:layout_marginBottom="8dp"
+        android:text="Ciudad Actual"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewCity"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="328dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="16dp"
+        android:text="25°C"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewWeather"
+        android:layout_width="98dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTemperature"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="335dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="32dp"
+        android:text="Soleado"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textViewHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewWeather"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="323dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginBottom="8dp"
+        android:text="Humedad: 80%"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textViewVisibility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewWind"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="Visibilidad: Buena"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textViewWind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewHumidity"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="8dp"
+        android:text="Viento: 10 km/h"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textViewForecast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewVisibility"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="57dp"
+        android:text="Pronóstico para hoy:"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewForecast"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="32dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <include layout="@layout/item_forecast" />
+
+            <include layout="@layout/item_forecast" />
+
+            <include layout="@layout/item_forecast" />
+
+            <include layout="@layout/item_forecast" />
+
+            <include layout="@layout/item_forecast" />
+
+            <include layout="@layout/item_forecast" />
+
+            <include layout="@layout/item_forecast" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/buttonUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/horizontalscrollview"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="292dp"
+        android:background="@drawable/button_bg"
+        android:text="Actualizar Clima"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+</RelativeLayout>
